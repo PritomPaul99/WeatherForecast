@@ -13,35 +13,11 @@
   </head>
   <body>
     <div class="window">
-      <!-- nav bar start -->
-      <div class="navbar">
-        <nav>
-          <ul>
-            <li>
-              <a class="active" href="index.html"
-                ><i class="fa-solid fa-location-arrow"></i
-              ></a>
-            </li>
-            <li>
-              <a href="search.html"
-                ><i class="fa-solid fa-magnifying-glass"></i
-              ></a>
-            </li>
-            <li>
-              <a href="world.html"
-                ><i class="fa-solid fa-earth-americas"></i
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- nav bar end -->
-
       <!-- main section -->
       <div id="screen">
         <!-- city name -->
         <div class="city-name">
-          <i class="fa-solid fa-map-pin"></i>
+         <i class="fa-solid fa-map-location-dot"></i>
           <h1 id="city-name">Sylhet</h1>
         </div>
 
@@ -51,11 +27,11 @@
         </div>
         <!-- weather details -->
         <div class="weather-description">
-          <div class="show-metric" id="metric">0°</div>
+          <div class="show-metric" id="temp">23°</div>
           <div class="weather-details">
             <div class="weather-main" id="weather-main">Sunny</div>
             <div class="h-f">
-              <div class="show-humidity">H: <span id="humidity">60</span></div>
+              <div class="show-humidity">H: <span id="humidity">50</span></div>
               ||
               <div class="show-humidity">
                 F: <span id="feels-like">60</span>
@@ -63,6 +39,7 @@
             </div>
           </div>
         </div>
+
         <!-- Today-forecast -->
         <div class="forcasts-box">
           <div class="today-forecast">
@@ -86,5 +63,28 @@
         <!-- Today-forecast -->
       </div>
     </div>
+
+    <!-- navbar outside of the window -->
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li>
+            <a class="active" href="index.html"
+              ><i class="fa-solid fa-location-arrow"></i
+            ></a>
+          </li>
+          <li>
+            <a href="search.html"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </li>
+          <li>
+            <a href="world.html"><i class="fa-solid fa-earth-americas"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
