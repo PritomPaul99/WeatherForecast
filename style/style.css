@@ -37,11 +37,13 @@ body {
   overflow: hidden;
 }
 
- nav {
+nav {
   position: fixed; /* Keeps the navbar fixed in place */
   left: 50%; /* Positions the navbar horizontally at 50% */
   bottom: 5px; /* Sticks the navbar at the bottom */
-  transform: translateX(-50%); /* Centers the navbar by adjusting the horizontal alignment */
+  transform: translateX(
+    -50%
+  ); /* Centers the navbar by adjusting the horizontal alignment */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +55,6 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-
 
 nav ul {
   display: flex;
@@ -99,12 +100,12 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 100px;
   margin-top: 10px;
 }
 
 .weather-icon-css img {
-  width: 80%;
+  width: 50%;
 }
 
 .weather-description {
@@ -132,7 +133,8 @@ nav ul li a {
   margin-top: 10px;
 }
 
-.show-humidity, .show-feels-like {
+.show-humidity,
+.show-feels-like {
   font-size: 16px;
   margin-top: 5px;
 }
@@ -141,7 +143,7 @@ nav ul li a {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 columns */
   grid-gap: 10px; /* Spacing between fields */
-  width: 90%; 
+  width: 90%;
   margin-top: 20px;
 }
 
@@ -155,20 +157,28 @@ nav ul li a {
 
 .forcasts-box {
   display: flex;
+  justify-content: space-between; /* Align today and 6-day forecasts properly */
+  padding: 0 10px; /* Add some padding to the left and right */
   margin: 20px 0;
   color: var(--font-color-main);
+}
+
+.forecast-box-inside {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .today-forecast {
   width: 100px;
   height: 160px;
   border-radius: 20px;
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--white-color);
+  margin-right: 15px; /* Add some spacing between today and 6-day forecast */
 }
 
 .weather-icon-today img {
@@ -184,11 +194,84 @@ nav ul li a {
 }
 
 .forecast {
-  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; /* Allow the forecast box to take available space */
+  border-radius: 20px;
+  background-color: var(--white-color);
+  padding-left: 10px;
 }
 
-#forecast-box {
-  margin-top: 10px;
+/* Style for each forecast item */
+.forecast-item {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(47, 168, 255, 0.249);
+  padding: 15px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  text-align: center;
+  width: 100px; /* Consistent width for all items */
+  height: 160px;
+  margin: 5px 5px; /* Add margin between items for even spacing */
+}
+
+.weather-icon-forecast img {
+  width: 50px; /* Slightly increased size for better visibility */
+}
+
+.day-name,
+.temp-forecast,
+.weather-main-forecast {
+  font-weight: 500;
+  color: var(--font-color-main);
+}
+
+.temp-forecast {
+  margin: 5px 0; /* Consistent margin for temperature forecast */
+}
+.weather-main-forecast {
+  font-size: 14px; /* Increased font size for better readability */
+  margin-top: 5px; /* Add some space between the icon and description */
+}
+
+.search-container {
+  width:fit-content;
+  height: fit-content;
+  padding: 50px;
+  margin: 10px auto;
+  border: 1px solid var(--font-color-main);
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+h1 {
+  margin-bottom: 20px;
+  color: var(--font-color-main);
+}
+
+#city-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--font-color-main);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #2a1a5c;
 }
